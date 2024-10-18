@@ -1,0 +1,412 @@
+/* m2 scss */
+
+$main-blue: #306ee8;
+.service {
+  padding: 24px !important;
+}
+body,
+.card p {
+  color: $gray-800;
+  font-size: 1rem;
+}
+p {
+  font-size: 1.125rem;
+  text-align: justify;
+}
+.img-fluid {
+  width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* 全站通用                                            */
+/* ------------------------------------------------ */
+/* font style  */
+.cht-txt-link:hover {
+  color: $main-blue;
+}
+.cht-txt-highlight {
+  color: $red-500;
+}
+.cht-txt-line-clamp3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* icon style  */
+.cht-icon-round {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  line-height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+  border: 2px solid transparent;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a:hover .cht-icon-round {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/*  menu   */
+.site-nav .site-navigation .site-menu > li > a,
+.site-nav .site-navigation .site-menu .has-children .dropdown a,
+.site-mobile-menu .site-nav-wrap > li > a,
+.site-mobile-menu .site-nav-wrap > li > ul > li > a {
+  font-size: 1rem;
+}
+
+.site-nav {
+  @include media-breakpoint-down(sm) {
+    top: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.site-nav .site-navigation .site-menu .has-children > a:before {
+  position: absolute;
+  content: "\f282"; /*bi-chevron-down*/
+  font-size: 14px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "bootstrap-icons";
+}
+.site-mobile-menu {
+  width: 200px;
+}
+.site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
+  padding-top: 10px;
+}
+.site-mobile-menu .site-nav-wrap a {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.site-mobile-menu .site-nav-wrap .cht-arrow-collapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.site-mobile-menu .site-nav-wrap .cht-arrow-collapse .cht-arrow-collapse-icon {
+  display: inline-block;
+  background: $main-blue;
+  background: transparent;
+  border-radius: 18px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+//關閉
+.site-mobile-menu .site-nav-wrap .cht-arrow-collapse.collapsed .cht-arrow-collapse-icon {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+.site-mobile-menu .site-nav-wrap .cht-arrow-collapse .cht-arrow-collapse-icon:before {
+  content: "\f282"; /*bi-chevron-down*/
+  font-family: "bootstrap-icons";
+  color: $white;
+  color: $main-blue;
+  font-size: 18px;
+  line-height: 18px;
+}
+.site-mobile-menu .site-nav-wrap .collapse,
+.site-mobile-menu .site-nav-wrap .collapse.show {
+  padding: 0;
+  margin: 0;
+}
+/* btn */
+.btn {
+  font-size: 16px;
+  text-transform: none;
+}
+/* slider */
+.post-slider-wrap .tns-nav button.tns-nav-active:before,
+.testimonial-slider-wrap .tns-nav button.tns-nav-active:before {
+  background-color: $main-blue !important;
+}
+.post-slider-wrap .tns-nav button:before,
+.testimonial-slider-wrap .tns-nav button:before {
+  background-color: $gray-400 !important;
+}
+/*  hero   */
+.hero,
+.hero > .container > .row {
+  min-height: 120px;
+  height: 120px;
+  @include media-breakpoint-down(sm) {
+    min-height: 80px;
+    height: 80px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+.hero.inner-page,
+.hero.inner-page > .container > .row {
+  min-height: 260px;
+  height: 260px;
+  @include media-breakpoint-down(lg) {
+    min-height: 160px;
+    height: 160px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+/* footer  */
+.site-footer {
+  padding: 10px 0;
+  @include media-breakpoint-down(md) {
+    padding: 10px 40px 10px 20px;
+  }
+  p {
+    font-size: 14px;
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
+  }
+}
+.cht-gotop {
+  font-size: 0;
+  cursor: pointer;
+  position: fixed;
+  z-index: 99;
+  right: 16px;
+  bottom: 16px;
+  display: block;
+  border-radius: 36px;
+  width: 36px;
+  height: 36px;
+  background-color: $main-blue;
+  padding-left: 9px;
+  padding-top: 5px;
+  opacity: 0.5;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  &:before {
+    content: "\f286"; /*bi-chevron-up*/
+    font-family: "bootstrap-icons";
+    color: $white;
+    font-size: 16px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------ */
+/* page0 首頁                                        */
+/* ------------------------------------------------ */
+/* 圖片 */
+.cht-idx-service-img {
+  // max-width: 480px;
+  // width: 100%;
+}
+.cht-qrcode-img {
+  width: 120px;
+  height: auto;
+  @include media-breakpoint-down(sm) {
+    width: 80px;
+  }
+}
+.index-h3:after {
+  font-family: bootstrap-icons !important;
+  content: "\f285";
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 4px;
+}
+/* 最新消息　分類 */
+.badge {
+  color: $gray-700;
+  font-weight: normal;
+}
+// colors: see _variables.scss
+// 更版
+.cht-badge-color-change {
+  background-color: $teal-500;
+  color: $white;
+}
+// 障礙
+.cht-badge-color-error {
+  background-color: $red-500;
+  color: $white;
+}
+// 最新消息 列表
+.cht-idx-news-item {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $gray-500;
+  .card-date {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .card-txt {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// 最新消息
+.cht-card-news {
+  height: 284px;
+}
+.post-slider-wrap .tns-nav {
+  bottom: 60px;
+}
+
+/* ------------------------------------------------ */
+/* page1 功能主頁 1_xxx_idx.html                     */
+/* ------------------------------------------------ */
+
+/* 介紹section  */
+.cht-section-func-idx {
+  @include media-breakpoint-down(sm) {
+    padding: 2rem 1rem;
+  }
+}
+/* qrcode 腰帶  */
+.cht-txt-white {
+  color: white;
+}
+.cht-qrcode-download-box {
+  h3 {
+    padding-left: 10px;
+    margin-bottom: 16px;
+  }
+  li {
+    margin: 8px 0;
+  }
+}
+/* 功能介紹 */
+.cht-download-card,
+.cht-service-card {
+  &:hover {
+    border: 1px solid $main-blue;
+  }
+  .service-txt {
+    margin-bottom: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 20px;
+    display: none;
+  }
+  h3:after {
+    font-family: bootstrap-icons !important;
+    content: "\f285";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 4px;
+  }
+}
+// sm
+.cht-service-card {
+  @include media-breakpoint-down(sm) {
+    padding: 16px 8px !important;
+    border: 0px solid red;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+/* 教學文件 */
+.cht-training-card {
+  &:hover {
+    border: 1px solid $main-blue;
+  }
+  img {
+    // display: none;
+  }
+  .card-body {
+    height: 150px;
+    padding: 24px;
+  }
+  h5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 48px;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+/* ------------------------------------------------ */
+/* page1 功能內頁 1_xxx_func01.html                  */
+/* ------------------------------------------------ */
+// 樣式多，移到_chtm2_page1.scss
+
+/* ------------------------------------------------ */
+/* page2 下載安裝           */
+/* ------------------------------------------------ */
+.cht-download-card {
+  h3 {
+    height: 40px;
+  }
+}
+a.cht-download-card {
+  display: block !important;
+  border-color: red;
+  &,
+  & * {
+    cursor: pointer;
+  }
+}
+/* ------------------------------------------------ */
+/* page3 FAQ                                        */
+/* ------------------------------------------------ */
+.accordion-body {
+  background-color: $gray-100 !important;
+  color: $black !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $main-blue;
+  color: $white;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button.collapsed {
+  color: $main-blue;
+}
+/* ------------------------------------------------ */
+/* page4 contact 頁                                  */
+/* ------------------------------------------------ */
+.contact-info span {
+  font-size: 20px;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #306ee8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+}

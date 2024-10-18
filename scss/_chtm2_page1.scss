@@ -1,0 +1,139 @@
+/* ------------------------------------------------ */
+/* page1 功能內頁 1_xxx_func01.html                  */
+/* ------------------------------------------------ */
+
+/* 左側選單 */
+.cht-func-btn-group {
+  width: 100%;
+  position: static;
+  a.btn {
+    letter-spacing: 0;
+    padding: 10px !important;
+    font-weight: normal;
+  }
+  a.btn.btn-outline-primary.active {
+    color: $white;
+  }
+}
+/* 右側內容 */
+.cht-function-section {
+  padding-bottom: 0;
+}
+.cht-function-div {
+  padding: 1rem 0;
+  border-top: 1px solid $gray-400;
+  h2 {
+    color: $main-blue;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  p {
+    padding-left: 22px;
+  }
+  &:last-of-type {
+    // padding-bottom: 35vh;
+  }
+}
+.cht-func-h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: $gray-800 !important;
+  margin-bottom: 1rem;
+  & > i {
+    margin-right: 4px;
+  }
+}
+.cht-function-subdiv {
+  & > :not(h3) {
+    margin-left: 20px;
+  }
+}
+/* ------------------------------------------------ */
+/* 選單處理: pc-左側，mobile-置頂                 */
+/* ------------------------------------------------ */
+.cht-func-menu-MOBI {
+  display: none;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.cht-func-menu-PC {
+  display: block;
+}
+$font-size-mobile-dropdown: 16px;
+@include media-breakpoint-down(lg) {
+  .cht-func-menu-MOBI {
+    display: block;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: $font-size-mobile-dropdown;
+  }
+  .cht-func-menu-PC {
+    display: none;
+  }
+  .cht-func-menu-toggle-button,
+  .cht-func-menu-toggle-button:hover,
+  .cht-func-menu-toggle-button.show {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    color: $main-blue !important;
+  }
+  .cht-func-menu-toggle-button:after {
+    content: "\f286"; /*bi-chevron-up*/
+    font-family: "bootstrap-icons";
+    color: $main-blue;
+
+    font-size: 16px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+  }
+  .cht-func-menu-toggle-button.show:after {
+    transform: rotate(0deg);
+    transition: 0.5s;
+  }
+  .cht-func-menu-goback {
+    font-size: $font-size-mobile-dropdown !important;
+    // text-align: right;
+    // padding-left: 10px;
+  }
+  // 下拉
+  .cht-func-menu-dropdown-menu {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.2);
+    .list-group-item {
+      font-size: $font-size-mobile-dropdown;
+    }
+    .cht-func-btn-group {
+      margin-top: 20px;
+      a {
+        font-weight: normal;
+        padding: 0.5rem 1rem !important;
+        font-size: $font-size-mobile-dropdown;
+      }
+    }
+  }
+  //文章
+  .cht-function-section {
+    padding-top: 0;
+  }
+  .cht-function-div {
+    padding-top: 40px;
+    border-top: 0px;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+  .cht-function-div:last-of-type {
+    // padding-bottom: 80px;
+  }
+}

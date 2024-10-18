@@ -1,0 +1,30 @@
+/*
+* Template Name: Medio
+* Template Author: Untree.co
+* Template License: https://creativecommons.org/licenses/by/3.0/
+* Author URI: https://untree.co/
+
+* Twitter: https://twitter.com/Untree_co
+* Facebook: https://web.facebook.com/Untree.co/
+*/
+// cht
+// $font-family-sans-serif: "Work Sans", sans-serif;
+// $font-family-sans-serif-secondary: "Work Sans", sans-serif;
+$font-family-sans-serif: "Verdana", "Microsoft JhengHei", sans-serif;
+$font-family-sans-serif-secondary: "Verdana", "Microsoft JhengHei", sans-serif;
+
+@import "bootstrap/mixins";
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+@import "bootstrap/bootstrap";
+
+@import "components/site-navbar";
+@import "components/site-base";
+@import "components/site-blocks";
+@import "components/site-footer";
+
+// m化網站用樣式
+@import "chtm2";
+// 功能內頁css
+@import "chtm2_page1";
